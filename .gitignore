@@ -152,6 +152,13 @@ cython_debug/
 # VS Code
 .vscode/
 
+# Positron / RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.positron/
+
 # MacOS
 *.DS_Store
 
