@@ -1,7 +1,7 @@
 # Sales Forecasting & Analysis Project
 
 ## Description
-This project focuses on analyzing sales trends, seasonality, and product category performance using a simulated sales environment. It transitions from static CSV files to a robust **SQLite database** storage system to mimic real-world scenarios.
+This project focuses on analyzing sales trends, seasonality, and product category performance using a simulated sales environment. The project uses a **SQLite database** to store and query generated sales data, mimicking a real-world data analysis workflow where data is retrieved from a database.
 
 The project demonstrates:
 - Data generation and database management.
