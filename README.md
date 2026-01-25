@@ -1,7 +1,7 @@
 # Sales Forecasting Project
 
 ## Description
-This project aims to forecast sales using historical data.
+This project aims to forecast sales using historical data. (Proof of concept)
 
 ## Project Structure
 - `data/`: Contains dataset files (e.g., `sample_sales.csv`).
