@@ -25,6 +25,12 @@ The project demonstrates:
    pip install -r requirements.txt
    ```
 
+   **Note for Developers:**
+   This project uses `nbstripout` to automatically strip output and execution counts from Jupyter notebooks to keep the repository clean. Initialize the git filters by running:
+   ```bash
+   nbstripout --install
+   ```
+
 2. **Generate Database**
    Before running the analyses, generate the `sales.db` file by running the script:
    ```bash
