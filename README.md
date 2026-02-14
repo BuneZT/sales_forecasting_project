@@ -1,50 +1,57 @@
-# Sales Forecasting & Analysis (Proof of concept)
+# Data Forecasting & Analysis Notebooks
 
 ## Description
-This project focuses on analyzing sales trends, seasonality, and product category performance using a simulated sales environment. The project uses a **SQLite database** to store and query generated sales data, mimicking a real-world data analysis workflow where data is retrieved from a database.
+This repository is dedicated to exercises and experiments with data forecasting. It serves as a sandbox for testing various regression analysis techniques and predictive modeling approaches across different domains.
 
 The project demonstrates:
-- Data generation and database management.
-- Data extraction using SQL and Python.
-- Advanced data visualization with Matplotlib and Seaborn.
-- Analysis of temporal patterns (seasonality, day-of-week trends).
+- **Data Wrangling & Cleaning**: Preparing raw data for analysis.
+- **Exploratory Data Analysis (EDA)**: Visualizing relationships and distributions.
+- **Statistical Modeling**: Using OLS regression and other statistical methods.
+- **Predictive Analytics**: Forecasting future values based on historical data.
+
+## Notebooks Overview
+
+The `notebooks/` directory contains the following analyses:
+
+1.  **[House Price Forecast](notebooks/House_price_forcast.ipynb)**
+    -   **Goal**: Predict house prices based on features like square footage, grade, age, and location.
+    -   **Key Techniques**: Multiple Linear Regression, Log-transformation of target variables, Feature Engineering (e.g., luxury district identification).
+
+2.  **[Insurance Cost Forecast](notebooks/Insurance%20cost%20forcast.ipynb)**
+    -   **Goal**: Forecast medical insurance charges based on patient demographics and lifestyle choices.
+    -   **Key Techniques**: Interaction terms (e.g., Smoker * BMI), Residual Analysis, Shapiro-Wilk Normality Test.
+
+3.  **[Sales & SQLite Analysis](notebooks/sqlite_prediction_poc.ipynb)**
+    -   **Goal**: Analyze sales trends and seasonality using a SQL-backed data source.
+    -   **Key Concepts**: SQL integration with Python, Time-series analysis visualization.
 
 ## Project Structure
-- `data/`: Contains the SQLite database (`sales.db`).
-- `notebooks/`: Jupyter notebooks for analysis.
-    - `2.0-sql-analysis.ipynb`: Connects to the database and performs comprehensive EDA (Exploratory Data Analysis).
-- `src/`: Source code.
-    - `create_db.py`: Script to generate synthetic English sales data and populate the SQLite database.
+- `data/`: Contains datasets (CSV files like `insurance.csv`, `kc_house_data.csv`) and the SQLite database (`sales.db`).
+- `notebooks/`: Jupyter notebooks containing the analysis and code.
+- `src/`: Helper scripts.
+    - `create_db.py`: Script to generate synthetic sales data for the SQLite analysis.
 - `requirements.txt`: Python dependencies.
 
 ## Setup
 
 1. **Install Dependencies**
-   Ensure you have Python installed, then run:
+   Ensure you have Python installed, then install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-   **Note for Developers:**
-   This project uses `nbstripout` to automatically strip output and execution counts from Jupyter notebooks to keep the repository clean. Initialize the git filters by running:
-   ```bash
-   nbstripout --install
-   ```
-
-2. **Generate Database**
-   Before running the analyses, generate the `sales.db` file by running the script:
+2. **Generate Database (Optional)**
+   For the Sales/SQLite analysis, you may need to generate the database file:
    ```bash
    python src/create_db.py
    ```
-   This will create a `data/sales.db` file populated with synthetic sales records (2024-2025).
 
-3. **Run Analysis**
-   Open the Jupyter Notebook to view the visualizations:
-   - File: `notebooks/2.0-sql-analysis.ipynb`
-   - You can run all cells to see the generated reports on sales trends, category performance, and price distributions.
+3. **Run Notebooks**
+   Open any of the notebooks in the `notebooks/` folder to view the analysis and run the models.
 
 ## Technologies
 - **Python**
-- **SQLite** (Data Storage)
-- **Pandas** (Data Manipulation)
+- **Statsmodels & Scikit-Learn** (Modeling)
+- **Pandas & NumPy** (Data Manipulation)
 - **Matplotlib & Seaborn** (Data Visualization)
+- **SQLite** (Data Storage)
